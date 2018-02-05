@@ -10,9 +10,9 @@
 #include "TimeProvider.h"
 
 class Now {
-    const TimeProvider &timeProvider;
+    TimeProvider& timeProvider;
 public:
-    Now(const TimeProvider &timeProvider);
+    Now(TimeProvider &timeProvider);
 
     std::string getString();
 };

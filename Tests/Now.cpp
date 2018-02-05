@@ -5,8 +5,9 @@
 #include <iomanip>
 #include <sstream>
 #include "Now.h"
+#include "SystemTimeProvider.h"
 
-Now::Now(const TimeProvider &timeProvider) : timeProvider(timeProvider) {}
+Now::Now(TimeProvider &timeProvider) : timeProvider(timeProvider) {}
 
 std::string Now::getString() {
     std::stringstream ss;
@@ -14,4 +15,5 @@ std::string Now::getString() {
     ss << std::put_time(localtime(&time), "%Y-%m-%d %H:%M:%S");
     return ss.str();
 }
+
 
