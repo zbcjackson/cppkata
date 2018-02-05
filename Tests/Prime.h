@@ -11,7 +11,7 @@
 class Prime {
 
 public:
-    std::vector<int> factors(int number);
+    std::vector<int> factors(int number) const;
 };
 
 
